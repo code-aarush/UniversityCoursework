@@ -21,9 +21,22 @@ mark = int(input("Enter mark: "))
 
 # TODO 1 – Manual if/elif ladder.
 grade_manual = ""
+if mark >= 90:
+    grade_manual = 'A'
+elif mark >= 80:
+    grade_manual = 'B'
+elif mark >= 70:
+    grade_manual = 'C'
+elif mark >= 60:
+    grade_manual = 'D'
+else:
+    grade_manual = 'F'
 
 # TODO 2 – Dict lookup based on decade (mark//10).
 grade_builtin = ""
+table = {10:'A', 9:'A', 8:'B', 7:'C', 6:'D'}   
+grade_builtin = table.get(mark // 10, 'F')
+
 # HINT: table = {10:'A', 9:'A', 8:'B', 7:'C', 6:'D'}; default 'F'
 
 print(grade_manual)
