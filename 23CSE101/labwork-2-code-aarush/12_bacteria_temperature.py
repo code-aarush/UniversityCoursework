@@ -16,7 +16,7 @@
 #     Psychrophiles (-15 ≤ t ≤ 10)
 #
 #  Input: n then n temperatures.
-#  Output:
+#  Output:y
 #     For each temp → matching classes (| separated).
 #     Then totals for each class (Name: count).
 #  Print twice (manual and lambda list).
@@ -35,6 +35,25 @@ temps = list(map(int, input().split()))
 per_manual = []   # list of strings like "Thermophile|Psychrotrophs"
 totals_manual = {}  # dict of class -> count
 
+for t in temps:
+    labels = []
+
+    if t >= 60:
+        labels.append("Hyperthermophile")
+    if 45 <= t <= 122:
+        labels.append("Thermophile")
+    if 20 <= t <= 45:
+        labels.append("Mesophile")
+    if t >= 0:
+        labels.append("Psychrotrophs")
+    if -15 <= t <= 10:
+        labels.append("Psychrophiles")
+
+    per_manual.append("|".join(labels))
+
+    for label in labels:
+        totals_manual[label] = totals_manual.get(label, 0) + 1
+
 # TODO 2 – Use list of (name, lambda) and dict.get() to replicate the same.
 CLASSES = [
     ("Hyperthermophile", lambda t: t >= 60),
@@ -46,5 +65,24 @@ CLASSES = [
 per_builtin = []
 totals_builtin = {}
 
+for t in temps:
+    labels = [name for name, cond in CLASSES if cond(t)]
+    per_builtin.append("|".join(labels))
+    for label in labels:
+        totals_builtin[label] = totals_builtin.get(label, 0) + 1
+
 # TODO 3 – Print per-temp lines (manual), then totals (manual).
 # Then print per-temp lines (built-in), then totals (built-in).
+
+for line in per_manual:
+    print(line)
+
+for name, count in totals_manual.items():
+    print(f"{name}: {count}")
+
+
+for line in per_builtin:
+    print(line)
+
+for name, count in totals_builtin.items():
+    print(f"{name}: {count}")
