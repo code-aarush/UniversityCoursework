@@ -1,3 +1,5 @@
+# Print the formatted address, taking individual lines as user input 
+
 address = {
     "Name" : input("Enter address holder name: "), # identity
     "House number" : input("Enter your house/unit number: "), # could be an office address too

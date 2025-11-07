@@ -1,3 +1,5 @@
+# Find the largest of 3 numbers
+
 a = input("Enter a unique number 1: ")
 b = input("Enter a unique number 2: ")
 c = input("Enter a unique number 3: ")

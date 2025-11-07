@@ -1,3 +1,5 @@
+# Find the roots of a quadratic equation
+
 import math
 
 a = int(input("In the equation (ax^2 + bx + c) enter value of a: "))

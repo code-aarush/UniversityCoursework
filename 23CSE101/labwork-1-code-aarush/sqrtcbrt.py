@@ -1,3 +1,5 @@
+# Finding the square root and cube root of a quadratic equation
+
 operation = str(input("ENTER 1 TO FIND SQUARE ROOT \nENTER 2 TO FIND CUBE ROOT : ")) # fetching the operation from user
 num = float(input("Enter number to find square/cube root of: ")) # getting number
 if operation == "1" : # finding square root 

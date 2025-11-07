@@ -1,3 +1,5 @@
+# Create a simple calculator with basic math functionality
+
 class Calculator :
     def __init__(self): # creates a dictionary filled with the methods to be called based on user input
         self.operations = {
