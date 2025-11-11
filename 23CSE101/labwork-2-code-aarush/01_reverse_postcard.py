@@ -44,6 +44,8 @@ print(reverse_builtin)
 # REFLECTION (2–3 sentences):
 # Which approach was easier to write and why?
 
-''' The use of the built-in reversal function was an easier implimentation.The loop approach just 
-    uses more lines of code and involves actual programmer logic instead of just using a function'''
+''' 
+The use of the built-in reversal function was an easier implimentation.The loop approach just 
+uses more lines of code and involves actual programmer logic instead of just using a function
+'''
 
