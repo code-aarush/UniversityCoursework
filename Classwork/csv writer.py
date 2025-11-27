@@ -16,7 +16,7 @@ class csvWriter:
         f = open(self.filename, "a")
         f.write(line + "\n")
 
-data = [for i in range(10): {"Name": "S Aarush", "RollNo": "349", "Semester": "1" }]
+data = [{"Name": "S Aarush", "RollNo": "349", "Semester": "1" }]
 new_csvWriter = csvWriter("demo.csv", ["Name", "RollNo", "Semester"])
 new_csvWriter.write_row(data)
 
