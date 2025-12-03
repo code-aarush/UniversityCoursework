@@ -8,7 +8,5 @@ def bubble(arr):
     return arr
 
 my_arr = [random.randint(0, 100) for i in range(10)]
-
 bubble(my_arr)
-
 print(my_arr)

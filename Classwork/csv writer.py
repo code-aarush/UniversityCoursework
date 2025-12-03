@@ -19,4 +19,3 @@ class csvWriter:
 data = [{"Name": "S Aarush", "RollNo": "349", "Semester": "1" }]
 new_csvWriter = csvWriter("demo.csv", ["Name", "RollNo", "Semester"])
 new_csvWriter.write_row(data)
-
